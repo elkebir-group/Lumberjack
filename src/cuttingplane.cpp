@@ -176,35 +176,35 @@ int CuttingPlane::separate()
                       clause.push_back(Lit(_B2Var[p][c], true));
                     }
                     
-                    if (_activeEntries[q][c]){
+                    if (_activeEntries[p][d]){
                       /// constraint[1] = Triple(p, d, 0);
                       /// This entry is currently set to FALSE
                       /// This constraint will not be violated if it is TRUE next time
                       clause.push_back(Lit(_B2Var[p][d], false));
                     }
                     
-                    if (_activeEntries[p][c]){
+                    if (_activeEntries[q][c]){
                       /// constraint[2] = Triple(q, c, 0);
                       /// This entry is currently set to FALSE
                       /// This constraint will not be violated if it is TRUE next time
                       clause.push_back(Lit(_B2Var[q][c], false));
                     }
                     
-                    if (_activeEntries[p][c]){
+                    if (_activeEntries[q][d]){
                       /// constraint[3] = Triple(q, d, j);
                       /// This entry is currently set to TRUE
                       /// This constraint will not be violated if it is FALSE next time
                       clause.push_back(Lit(_B2Var[q][d], true));
                     }
                     
-                    if (_activeEntries[p][c]){
+                    if (_activeEntries[r][c]){
                       /// constraint[4] = Triple(r, c, i_prime);
                       /// This entry is currently set to TRUE
                       /// This constraint will not be violated if it is FALSE next time
                       clause.push_back(Lit(_B2Var[r][c], true));
                     }
                     
-                    if (_activeEntries[p][c]){
+                    if (_activeEntries[r][d]){
                       /// constraint[5] = Triple(r, d, j_prime);
                       /// This entry is currently set to TRUE
                       /// This constraint will not be violated if it is FALSE next time
