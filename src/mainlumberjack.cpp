@@ -12,7 +12,7 @@ using namespace CMSat;
 static void show_usage(std::string name){
     std::cerr << "Usage: " << name << std::endl;
     std::cerr << "\t-i/--input INPUT FILE (required)." << std::endl;
-    std::cerr << "\t-o/--output OUTPUT FOLDER (required) where results can be stored." << std::endl;
+    std::cerr << "\t-o/--output OUTPUT FILE (required) where results can be stored." << std::endl;
     std::cerr << "\t-t/--threads Number of threads (Default: 1)." << std::endl;
     return;
 }
@@ -77,7 +77,7 @@ int main(int argc, char** argv){
   inD.close();
 
   // Create output paths
-  std::string outputFilename = outputFolder+"/result.txt";
+  std::string outputFilename = outputFolder;
   
   // Construct and run solver
   CuttingPlane solver(D, k);
